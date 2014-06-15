@@ -21,10 +21,10 @@ Start off by plugging the Uno into your computer. Make sure your computer recogn
     UUID:               45dc9928-b695-449c-8800-5a0dd6be60ce
     VendorId:           0x2341 (2341)
     ProductId:          0x0043 (0043)
-Revision:           0.1 (0001)
+    Revision:           0.1 (0001)
     Port:               2
     USB version/speed:  0/1
-Manufacturer:       Arduino (www.arduino.cc)
+    Manufacturer:       Arduino (www.arduino.cc)
     SerialNumber:       85231363136351210152
     Address:            p=0x0043;v=0x2341;s=0x00001097b59604cc;l=0x14200000
     Current State:      Captured
