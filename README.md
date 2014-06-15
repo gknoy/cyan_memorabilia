@@ -73,7 +73,7 @@ unplug/plug it back in). Congrats!
 **Note: There are some libraries in /usr/share/arduino/libraries that may not be able to compile correctly. Go ahead and precede each library dir with a . that gives you a compilation error (for example Robot\_Control becomes .Robot\_Control).
 
 ## References for Programming
-    - Note that the example in Adafruit-RGB-LCD-Shield-Library/examples/HelloWorld is a good reference!
-    - [Some Basic Information on the Shield](https://learn.adafruit.com/rgb-lcd-shield/using-the-rgb-lcd-shield)
-    - [The LCD DataSheet](https://www.adafruit.com/datasheets/HD44780.pdf)
-    - [Arduino Programming Guide](http://playground.arduino.cc/uploads/Main/arduino_notebook_v1-1.pdf)
+  - Note that the example in Adafruit-RGB-LCD-Shield-Library/examples/HelloWorld is a good reference!
+  - [Some Basic Information on the Shield](https://learn.adafruit.com/rgb-lcd-shield/using-the-rgb-lcd-shield)
+  - [The LCD DataSheet](https://www.adafruit.com/datasheets/HD44780.pdf)
+  - [Arduino Programming Guide](http://playground.arduino.cc/uploads/Main/arduino_notebook_v1-1.pdf)
