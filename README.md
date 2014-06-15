@@ -1,4 +1,4 @@
-yan Memorabilia on an Arduino
+Cyan Memorabilia on an Arduino
 ==========================
 
 This repository is dedicated to collecting a series of programs that run on an Arduino Uno with an RGB LCD shield
@@ -9,7 +9,7 @@ Setting Up Your Environment
 ---------------
 I highly recommend working on a Linux machine. I haven't tested working with Mac OS X or Windows. There are many ways to set up your 
 environment to work on Arduino projects, however these instructions will take you through setting up a Vagrant + Virtual Box + Ubuntu development
-workspace
+workspace. If you want to run barebones Linux, skip the Vagrant instructions.
 
 Lets start by forking and cloning this repo (if you're using Vagrant do this on the host):
 
@@ -19,8 +19,11 @@ and don't forget to add the upstream remote:
 
     git remote add upstream git@github.com:zysh/cyan_memorabilia.git
 
-### Install Vagrant and Virtual Box
-     I'm going to assume you have prior work experience with Vagrant and Virtual Box.
+## Vagrant Instructions
+I'm going to assume you have prior work experience with Vagrant and Virtual Box and that they are both installed correctly along with
+Guest Additions. Note that in the Vagrantfile we do two things: Create a shared folder in the default vagrant users home directory and
+set up our VM so it can see the arduino connected on the host machine. If you're using a base box with a user other than vagrant make
+sure to change the shared folder location.
 
 ### Connect the Arduino
 
@@ -39,13 +42,12 @@ Plug the Uno into your computer. Make sure your computer recognizes the device. 
     Current State:      Captured
 
 If you're running Linux a simple `lsusb` will do.
-
-### Working with Vagrant
+Once you know your host machine can detect the Arduino unplug it.
 You can now run `vagrant up` with the Vagrantfile configuration given. Once you're ssh'd in go ahead and run
 `lsusb`. If you can't see the device unplug it and plug it back in. Run `lsusb` again.
 
-### Setting up your environment
-For starters we need the arduino IDE for some libraries and files.
+### Setting up the Arduino Environment
+For starters we need the arduino IDE for some standard libraries.
 
     sudo apt-get install arduino
 
@@ -53,9 +55,10 @@ We'll install pip as our package manager
 
     sudo apt-get install python-pip
 
-With pip installed we can grab our command line utility ino. Ino is essentially the arduino ide without the GUI.
+With pip installed we can grab our command line utility ino. Ino is essentially the arduino ide without the GUI. Feel free
+to use a virtualenv wrapper.
 
-    pip install ino
+    sudo pip install ino
 
 Finally we'll need to grab the LCD libraries which can be found [here](https://github.com/adafruit/Adafruit-RGB-LCD-Shield-Library).
 Go ahead and clone the repo:
@@ -64,8 +67,13 @@ Go ahead and clone the repo:
 
 Move the entire Adafruit-RGB-LCD-Shield-Library directory to /usr/share/arduino/libraries/
 
-**Note that the example in Adafruit-RGB-LCD-Shield-Library/examples/HelloWorld is a good reference!
-
-Make sure your pwd is cyan\_memorabilia. Go ahead and run `ino build`. Once this has completed run `ino upload`. If all goes well the LCD should light up. Congrats!
+Make sure your pwd is cyan\_memorabilia. Go ahead and run `ino build`. Once this has completed run `ino upload`. If all goes well the LCD should light up (you may have to
+unplug/plug it back in). Congrats!
 
 **Note: There are some libraries in /usr/share/arduino/libraries that may not be able to compile correctly. Go ahead and precede each library dir with a . that gives you a compilation error (for example Robot\_Control becomes .Robot\_Control).
+
+## References for Programming
+    - Note that the example in Adafruit-RGB-LCD-Shield-Library/examples/HelloWorld is a good reference!
+    - [Some Basic Information on the Shield](https://learn.adafruit.com/rgb-lcd-shield/using-the-rgb-lcd-shield)
+    - [The LCD DataSheet](https://www.adafruit.com/datasheets/HD44780.pdf)
+    - [Arduino Programming Guide](http://playground.arduino.cc/uploads/Main/arduino_notebook_v1-1.pdf)
