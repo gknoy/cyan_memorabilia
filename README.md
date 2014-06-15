@@ -51,16 +51,16 @@ For starters we need the arduino IDE for some libraries and files.
 
 We'll install pip as our package manager
 
-sudo apt-get install python-pip
+    sudo apt-get install python-pip
 
 With pip installed we can grab our command line utility ino. Ino is essentially the arduino ide without the GUI.
 
-pip install ino
+    pip install ino
 
 Finally we'll need to grab the LCD libraries which can be found [here](https://github.com/adafruit/Adafruit-RGB-LCD-Shield-Library).
 Go ahead and clone the repo:
 
-git clone git@github.com:adafruit/Adafruit-RGB-LCD-Shield-Library.git
+    git clone git@github.com:adafruit/Adafruit-RGB-LCD-Shield-Library.git
 
 Move the entire Adafruit-RGB-LCD-Shield-Library directory to /usr/share/arduino/libraries/
 
