@@ -17,7 +17,7 @@ I'm going to assume you have prior work experience with Vagrant and Virtual Box.
 ### Connect the Arduino
 
 Start off by plugging the Uno into your computer. Make sure your computer recognizes the device with the command:
-<pre><code>
+```
     $ VBoxManage list usbhost
     UUID:               45dc9928-b695-449c-8800-5a0dd6be60ce
     VendorId:           0x2341 (2341)
@@ -29,7 +29,7 @@ Start off by plugging the Uno into your computer. Make sure your computer recogn
     SerialNumber:       85231363136351210152
     Address:            p=0x0043;v=0x2341;s=0x00001097b59604cc;l=0x14200000
     Current State:      Captured
-    </code></pre>
+```
 
 ### Working with Vagrant
     You can now run `vagrant up` with the Vagrantfile configuration given. Once you're ssh'd in, go ahead and run
@@ -37,11 +37,11 @@ Start off by plugging the Uno into your computer. Make sure your computer recogn
 
 ### Setting up your environment
     For starters we need the arduino IDE for some libraries and files.
-    <pre><code>     sudo apt-get install arduino </code></pre>
+    ```     sudo apt-get install arduino ```
     We'll install pip as our package manager
-    <pre><code>     sudo apt-get install python-pip </code></pre>
+    ```     sudo apt-get install python-pip ```
     With pip installed we can grab our command line utility ino. Ino is essentially the arduino ide without the GUI.
-    <pre><code>     pip install ino </code></pre>
+    ```     pip install ino ```
     Go ahed and make  directory for our new project. For sake of simplicity I'll refer to the root project directory as myproj.
     cd into myproj and run `ino init`.
 
