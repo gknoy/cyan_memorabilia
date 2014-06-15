@@ -17,7 +17,8 @@ I'm going to assume you have prior work experience with Vagrant and Virtual Box.
 ### Connect the Arduino
 
 Start off by plugging the Uno into your computer. Make sure your computer recognizes the device with the command:
-<pre><code>     $ VBoxManage list usbhost
+<pre><code>
+    $ VBoxManage list usbhost
     UUID:               45dc9928-b695-449c-8800-5a0dd6be60ce
     VendorId:           0x2341 (2341)
     ProductId:          0x0043 (0043)
@@ -31,8 +32,8 @@ Start off by plugging the Uno into your computer. Make sure your computer recogn
     </code></pre>
 
 ### Working with Vagrant
-    You can now run <code>vagrant up</code> with the Vagrantfile configuration given. Once you're ssh'd in, go ahead and run
-    <code>lsusb</code>. If you can't see the device, unplug it and plug it back in. Run <code>lsusb</code> again.
+    You can now run `vagrant up` with the Vagrantfile configuration given. Once you're ssh'd in, go ahead and run
+    `lsusb`. If you can't see the device, unplug it and plug it back in. Run `lsusb` again.
 
 ### Setting up your environment
     For starters we need the arduino IDE for some libraries and files.
@@ -42,7 +43,7 @@ Start off by plugging the Uno into your computer. Make sure your computer recogn
     With pip installed we can grab our command line utility ino. Ino is essentially the arduino ide without the GUI.
     <pre><code>     pip install ino </code></pre>
     Go ahed and make  directory for our new project. For sake of simplicity I'll refer to the root project directory as myproj.
-    cd into myproj and run <code>ino init</code>.
+    cd into myproj and run `ino init`.
 
     Finally we'll need to grab the LCD libraries which can be found [here](https://github.com/adafruit/Adafruit-RGB-LCD-Shield-Library).
     Go ahead and clone the repo:
